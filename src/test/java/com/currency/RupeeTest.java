@@ -20,10 +20,9 @@ class RupeeTest {
 
 
     @Test
-    void shouldAddValueOfRupeeObject() {
+    void shouldAddTwoRupees() {
         Rupee rupee = new Rupee(5);
-        Rupee expectedResult = new Rupee(7);
-        assertEquals(expectedResult,rupee.add(new Rupee(2)));
+        assertEquals(new Rupee(7),rupee.add(new Rupee(2)));
     }
 
 }

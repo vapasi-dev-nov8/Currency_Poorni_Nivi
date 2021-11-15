@@ -2,8 +2,7 @@ package com.currency;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 class RupeeTest {
 
@@ -19,5 +18,12 @@ class RupeeTest {
         assertFalse(rupee.equals(new Rupee(20)));
     }
 
+
+    @Test
+    void shouldAddValueOfRupeeObject() {
+        Rupee rupee = new Rupee(5);
+        Rupee expectedResult = new Rupee(7);
+        assertEquals(expectedResult,rupee.add(new Rupee(2)));
+    }
 
 }

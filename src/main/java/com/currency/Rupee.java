@@ -8,7 +8,14 @@ public class Rupee {
         this.value = value;
     }
 
-    public boolean equals(Rupee rupee) {
-        return this.value == rupee.value;
+    @Override
+    public boolean equals(Object obj) {
+        Rupee inputRupee = (Rupee) obj;
+        return this.value == inputRupee.value;
     }
+
+    public Rupee add(Rupee rupee) {
+        return new Rupee(this.value + rupee.value);
+    }
+
 }
